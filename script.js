@@ -22,5 +22,20 @@ confBtn.addEventListener('click', (e) => {
     spellName.value = null;
     spellAuthor.value = null;
 
+    // Adding the spell to our DOM with class .spell-i:
+    const div = document.createElement('div');
+    div.classList.add(`spell spell-${spellReportoire.length}`);
+    const spellBlock = document.querySelector('.spells');
+    console.log(spellBlock);
+    console.log(spellBlock.textContent);
+    const emptyElement = document.querySelector('#empty');
+    emptyElement.remove();
+    for(const val in newSpell) {
+        const col = document.createElement('div');
+        col.textContent = newSpell[val];
+        div.appendChild(col);
+    }
+    spellBlock.appendChild(div);
+
     diaBox.close();
 });
