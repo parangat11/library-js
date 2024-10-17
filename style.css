@@ -1,76 +1,99 @@
+@font-face {
+  font-family: magic-font;
+  src: url(./font/harry-potter-font/HarryPotter-ov4z.ttf);
+}
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: magic-font, 'Times New Roman', Times, serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url('./images/raya-lucaria.jpg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .header {
-    font-size: 2.5rem;
-    font-weight: bold;
-    height: 115px;
-    background-color: aliceblue;
-    text-align: center;
-    padding-top: 3vh;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(0, 208, 255);
-    box-sizing: border-box;
-    width: 100%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-    z-index: 1;
+  background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+  background: rgba(204, 204, 204, 0.5);
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 115px;
+  /* background-color: aliceblue; */
+  text-align: center;
+  padding-top: 3vh;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(0, 208, 255);
+  box-sizing: border-box;
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  z-index: 1;
 }
 
 .container {
-    display: grid;
-    font-size: 1.8rem;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    box-sizing: border-box;
+  color: aquamarine;
+  display: flex;
+  font-size: 1.8rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-sizing: border-box;
+  gap: 50px;
 }
 
 .collect-data {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
 }
 
 #add {
-    font-size: 1.4rem;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 40px;
-    background-color: cyan;
-    border: 0;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  font-size: 1.4rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 40px;
+  background-color: cyan;
+  border: 0;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
 .spells {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+#empty, .spells > div {
+  align-self: center;
+  justify-self: center;
 }
 
 #conf-btn {
-    font-size: 1.7rem;
+  font-size: 1.7rem;
 }
 
 #new-spell {
-    font-size: 2rem;
-    padding: 40px;
+  font-size: 2rem;
+  padding: 40px;
 }
 
 input {
-    font-size: 1.5rem;
-}
-
-.spell {
-    display: flex;
-    gap: 20px;
+  font-size: 1.5rem;
 }
 
 /* .spells > * > *{
@@ -78,11 +101,75 @@ input {
 } */
 
 [class^='del-'] {
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 100%;
-    padding: 5px;
-    color: white;
-    background-color: red;
-    border: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  /* justify-content: center;
+  align-items: center; */
+  height: 1.4rem;
+  padding: 5px;
+  border: 0;
+}
+
+.spell {
+  height: 250px;
+  width: 370px;
+  backdrop-filter: blur(20px);
+  border-radius: 40px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-container {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.sub-container > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+dialog {
+  background-color: antiquewhite;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  padding: 50px;
+}
+
+#spell-learnt {
+  height: 40px;
+}
+
+#conf-btn {
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  width: 180px;
+  background-color: aqua;
+  border: 0;
+  border-radius: 40px;
+}
+
+.remember {
+  box-shadow: inset 0px 0px 10px 10px #7edb32;
+}
+
+.forgot {
+  box-shadow: inset 0px 0px 10px 10px #db3232;
+}
+
+#utils {
+  display: flex;
+  gap: 20px;
+  align-self: flex-end;
+  justify-self: flex-end;
+  box-sizing: border-box;
+  padding-top: 100px;
 }

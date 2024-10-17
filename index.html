@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mage Institution</title>
+    <link rel="favicon" href="./images/Pasted image (2).png">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -11,29 +12,44 @@
     <div class="header">
         <div class="title">Academy of Raya Lucaria 🎓</div>
     </div>
+    
     <div class="container">
         <div class="collect-data">
             <div class="prompt">Learn more spells 💡</div>
             <button id="add">Add Spells</button>
         </div>
         <!-- <div class="sub-container"> -->
-            <dialog id="new-spell">
-                <form>
-                    <label for="spell-name">Title:</label>
-                    <input type="text" id="spell-name">
-                    <label for="author">Author</label>
-                    <input type="text" id="author">
-                    <!-- <label for=""></label> -->
-                    <button id="conf-btn" value="default">
-                        Confirm
-                    </button>
-                </form>
-            </dialog>
+            
         <!-- </div> -->
         <div class="spells">
             <div id="empty">Empty!</div>
         </div>
     </div>
-    
+    <dialog id="new-spell">
+        <form>
+            <div class="sub-container">
+                <div class="ip-name">
+                    <label for="spell-name">Title:</label>
+                    <input type="text" id="spell-name">
+                </div>
+                <div class="ip-add">
+                    <label for="author">Author</label>
+                    <input type="text" id="author">
+                </div>
+                <div class="ip-year">
+                    <label for="spell-year">Spell Year</label>
+                    <input type="text" id="spell-year">
+                </div>
+                <div class="ip-learnt">
+                    <label for="spell-learnt">Spell Learnt</label>
+                    <input type="checkbox" id="spell-learnt">
+                </div>
+                <!-- <label for=""></label> -->
+                <button id="conf-btn" value="default">
+                    Confirm
+                </button>
+            </div>
+        </form>
+    </dialog>
 </body>
 </html>
