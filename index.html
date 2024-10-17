@@ -9,24 +9,27 @@
 </head>
 <body>
     <div class="header">
-        <div class="title">Sorcery School!</div>
+        <div class="title">Academy of Raya Lucaria 🎓</div>
     </div>
     <div class="container">
         <div class="collect-data">
-            <button class="add">Add More Books</button>
+            <div class="prompt">Learn more spells 💡</div>
+            <button id="add">Add Spells</button>
         </div>
-        <dialog id="new-book">
-            <form>
-                <label for="spell-name">Title:</label>
-                <input type="text" id="spell-name">
-                <label for="author">Author</label>
-                <input type="text" id="author">
-                <!-- <label for=""></label> -->
-                <button id="conf-btn" value="default">
-                    Confirm
-                </button>
-            </form>
-        </dialog>
+        <!-- <div class="sub-container"> -->
+            <dialog id="new-spell">
+                <form>
+                    <label for="spell-name">Title:</label>
+                    <input type="text" id="spell-name">
+                    <label for="author">Author</label>
+                    <input type="text" id="author">
+                    <!-- <label for=""></label> -->
+                    <button id="conf-btn" value="default">
+                        Confirm
+                    </button>
+                </form>
+            </dialog>
+        <!-- </div> -->
         <div class="spells">
             <div id="empty">Empty!</div>
         </div>

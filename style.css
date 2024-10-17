@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    height: 115px;
+    background-color: aliceblue;
+    text-align: center;
+    padding-top: 3vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 208, 255);
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    z-index: 1;
+}
+
+.container {
+    display: grid;
+    font-size: 1.8rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.collect-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#add {
+    font-size: 1.4rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 40px;
+    background-color: cyan;
+    border: 0;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.spells {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#conf-btn {
+    font-size: 1.7rem;
+}
+
+#new-spell {
+    font-size: 2rem;
+    padding: 40px;
+}
+
+input {
+    font-size: 1.5rem;
+}
+
+.spell {
+    display: flex;
+    gap: 20px;
+}
+
+/* .spells > * > *{
+    border: 1px solid blue;
+} */
+
+[class^='del-'] {
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 100%;
+    padding: 5px;
+    color: white;
+    background-color: red;
+    border: 0;
+}
