@@ -62,8 +62,10 @@ confBtn.addEventListener('click', (e) => {
     } else {
         div.classList.add('forgot');
     }
-    const delButton = document.createElement('button');
-    delButton.textContent = 'x';
+    const delButton = document.createElement('div');
+    let img = document.createElement('img');
+    img.src = "./images/recycle-bin-icon.svg";
+    delButton.appendChild(img);
     delButton.classList.add(`del-${index}`);
 
     // Delete button functionality
@@ -88,11 +90,15 @@ confBtn.addEventListener('click', (e) => {
 
     // Toggle learning functionality
     const toggleButton = document.createElement('div');
-    toggleButton.textContent = '*';
+    img = document.createElement("img");
+    img.src = "./images/check.svg";
+    img.alt = "not-found";
+    toggleButton.appendChild(img);
+    console.log(toggleButton);
     toggleButton.addEventListener('click', (e) => {
         for(let i = 0; i < spellReportoire.length; i++) {
             if(spellReportoire[i].spellIndex === newSpell.spellIndex) {
-                const toggledEle = document.querySelector(`.spell-${spellReportoire[i].spellIndex}`);
+                // const toggledEle = document.querySelector(`.spell-${spellReportoire[i].spellIndex}`);
                 if(spellReportoire[i].learnt) {
                     div.classList.remove('remember');
                     div.classList.add('forgot');
