@@ -174,7 +174,16 @@ dialog {
 }
 
 img {
-  height: 20px;
+  height: 30px;
   width: 20px;
   background: transparent;
+  filter: invert(96%) sepia(10%) saturate(1989%) hue-rotate(83deg) brightness(102%) contrast(103%);
+}
+
+[src="./images/recycle-bin-icon.svg"] {
+  height: 20px;
+}
+
+img:hover {
+  background-color: azure;
 }
