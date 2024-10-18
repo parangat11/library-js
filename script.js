@@ -123,3 +123,5 @@ confBtn.addEventListener('click', (e) => {
     
     diaBox.close();
 });
+
+// Can add the functionality to change svg depending on learnt or not learnt
